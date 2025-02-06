@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { LayoutDashboard, PenBox } from "lucide-react";
 
-const header = () => {
+const Header = () => {
     return (
         <div className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
             <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -22,9 +22,12 @@ const header = () => {
                     <SignedIn>
                         <Link
                             href="/dashboard"
-                            className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
+                            className="text-[#303045] hover:text-[#d1d1d6] flex items-center gap-2"
                         >
-                            <Button variant="outline">
+                            <Button
+                                variant="outline"
+                                className="border-[#303045] hover:border-[#303045] text-[#303045]"
+                            >
                                 <LayoutDashboard size={18} />
                                 <span className="hidden md:inline">Dashboard</span>
                             </Button>
@@ -32,9 +35,9 @@ const header = () => {
 
                         <Link
                             href="/transaction/create"
-                            className="text-gray-600 hover:text-blue-600 flex items-center gap-2"
+                            className="text-gray-600 flex items-center gap-2"
                         >
-                            <Button className="flex items-center gap-2">
+                            <Button className="flex items-center gap-2 text-[#e68687] hover:text-[#f4d6d6] bg-[#303045] hover:bg-[#49495b]">
                                 <PenBox size={18} />
                                 <span className="hidden md:inline">Add Transaction</span>
                             </Button>
@@ -50,7 +53,7 @@ const header = () => {
                         <UserButton
                             appearance={{
                                 elements: {
-                                    avatarBox: "w-10 h-10",
+                                    avatarBox: "w-12 h-12 border-2 border-[#303045]",
                                 },
                             }}
                         />
@@ -61,4 +64,4 @@ const header = () => {
     )
 }
 
-export default header
+export default Header
