@@ -12,9 +12,9 @@ const Header = () => {
                     <Image
                         src={"/expenser-logo.png"}
                         alt="Welth Logo"
-                        width={300}
-                        height={90}
-                        className="h-16 w-auto object-contain"
+                        width={400}  
+                        height={90}  
+                        className="h-20 w-auto object-contain"  
                     />
                 </Link>
 
